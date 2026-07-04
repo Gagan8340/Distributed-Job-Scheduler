@@ -35,10 +35,7 @@ This system guarantees **exactly-once execution semantics** across multiple dist
 
 The system relies on PostgreSQL as its unified datastore and locking engine. By using `SKIP LOCKED`, we bypass the need for an external Redis queue, reducing infrastructure complexity while maintaining strict ACID guarantees.
 
-For deep dives into the architecture, ER diagrams, and design trade-offs, please read the documentation in the `/docs` directory:
-*   [Architecture Overview](docs/architecture.md)
-*   [Database Design & ER Diagram](docs/database-design.md)
-*   [Concurrency & Design Decisions](docs/design-decisions.md)
+For deep dives into the architecture, ER diagrams, and design trade-offs, please continue reading the detailed sections below.
 
 ---
 

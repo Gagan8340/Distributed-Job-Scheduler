@@ -91,8 +91,8 @@
                             <h2 style="border: none; font-size: 20pt; color: #2b6cb0; margin-top: 20px;">Distributed Job Scheduling Platform</h2>
                             <p style="margin-top: 40px; font-size: 14pt; color: #4a5568;">System Architecture • Database Design • Concurrency & Reliability</p>
                             <div style="margin-top: 100px;">
-                                <p><strong>Author:</strong> [Your Name Here]</p>
-                                <p><strong>Repository:</strong> [Your GitHub Link Here]</p>
+                                <p><strong>Author:</strong> RA2311026010509-Sanagala Gagan</p>
+                                <p><strong>Repository:</strong> <a href="https://github.com/Gagan8340/Distributed-Job-Scheduler">https://github.com/Gagan8340/Distributed-Job-Scheduler</a></p>
                             </div>
                         </div>
                     </div>
@@ -148,8 +148,11 @@
         hr { border: none; border-top: 1px solid #e2e8f0; margin: 2em 0; }
 
         @media print {
-            body { padding: 0; margin: 0.5in; }
+            @page { size: A4; margin: 25mm; }
+            body { padding: 0; margin: 0; max-width: none; }
             .page-break { page-break-after: always; }
+            h1 { page-break-before: always; }
+            .title-content h1 { page-break-before: avoid; }
             h2, h3, h4 { page-break-after: avoid; }
             table, pre, .mermaid { page-break-inside: avoid; }
         }

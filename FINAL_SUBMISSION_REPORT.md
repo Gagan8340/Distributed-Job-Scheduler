@@ -1,7 +1,7 @@
-# Distributed Job Scheduler - Technical Design Document
+# Documentation & Technical Design Report
 
-**Author:** [Your Name/ID Here]
-**Repository:** [Your GitHub Link Here]
+**Author:** RA2311026010509-Sanagala Gagan
+**Repository:** https://github.com/Gagan8340/Distributed-Job-Scheduler
 
 ---
 
@@ -31,7 +31,7 @@ This system guarantees **exactly-once execution semantics** across multiple dist
 
 ---
 
-##  Architecture & Database Design
+## Backend Engineering & Database Design
 
 The system relies on PostgreSQL as its unified datastore and locking engine. By using `SKIP LOCKED`, we bypass the need for an external Redis queue, reducing infrastructure complexity while maintaining strict ACID guarantees.
 
@@ -70,7 +70,7 @@ npm run start:dev
 ```
 *The API will be available at `http://localhost:3000`.*
 
-### 3. Frontend Dashboard Setup
+### 3. Frontend & UX Dashboard Setup
 The frontend is a Vite + React SPA.
 ```bash
 cd frontend
@@ -83,7 +83,7 @@ npm run dev
 
 ---
 
-##  Testing
+## Testing
 
 The backend includes an automated test suite verifying the core worker logic (atomic claims, transaction rollbacks, graceful shutdown).
 ```bash
@@ -93,7 +93,7 @@ npm run test
 
 ---
 
-##  API Endpoints
+## API Design
 
 The REST API is highly structured and protected by JWT authentication and rate limiting (`@nestjs/throttler`).
 
@@ -117,7 +117,7 @@ The REST API is highly structured and protected by JWT authentication and rate l
 
 ---
 
-# Architecture Document: Distributed Job Scheduler
+# System Architecture
 
 ## 1. High-Level System Architecture
 
@@ -416,7 +416,7 @@ erDiagram
 
 ---
 
-# Design Decisions and Major Trade-offs
+# Reliability & Concurrency (Design Decisions and Trade-offs)
 
 This document explicitly details the major architectural trade-offs made during the engineering of the Distributed Job Scheduler MVP. 
 

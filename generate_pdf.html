@@ -42,20 +42,15 @@
 
                     if (level === 1) {
                         h1Counter++;
-                        h2Counter = 0;
                         const numberedText = `${h1Counter}. ${rawText}`;
                         const id = numberedText.toLowerCase().replace(/[^\w]+/g, '-');
                         headings.push({ text: numberedText, level, id });
                         return `<h${level} id="${id}">${numberedText}</h${level}>`;
                     } else if (level === 2) {
-                        h2Counter++;
-                        // If there was no h1 yet, assume it's under 1
-                        const h1P = h1Counter === 0 ? 1 : h1Counter;
-                        const numberedText = `${h1P}.${h2Counter} ${rawText}`;
-                        const id = numberedText.toLowerCase().replace(/[^\w]+/g, '-');
-                        headings.push({ text: numberedText, level, id });
-                        return `<h${level} id="${id}">${numberedText}</h${level}>`;
-                    }
+                          const id = rawText.toLowerCase().replace(/[^\w]+/g, '-');
+                          headings.push({ text: rawText, level, id });
+                          return `<h${level} id="${id}">${rawText}</h${level}>`;
+                      }
                     
                     return `<h${level}>${rawText}</h${level}>`;
                 };

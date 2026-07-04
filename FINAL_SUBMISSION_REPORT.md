@@ -1,11 +1,11 @@
-# Documentation & Technical Design Report
+## Documentation & Technical Design Report
 
 **Author:** RA2311026010509-Sanagala Gagan
 **Repository:** https://github.com/Gagan8340/Distributed-Job-Scheduler
 
 ---
 
-# Distributed Job Scheduler 
+## Distributed Job Scheduler 
 
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)

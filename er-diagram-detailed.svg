@@ -1,0 +1,369 @@
+<svg viewBox="0 0 1700 1300" xmlns="http://www.w3.org/2000/svg">
+<rect width="1700" height="1300" fill="#fafafa"/>
+<text x="850.0" y="34" text-anchor="middle" font-family="Segoe UI, Arial" font-size="20" font-weight="700" fill="#111827">Entity-Relationship Diagram — Distributed Job Scheduler</text>
+<text x="850.0" y="56" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#6b7280">PK = primary key   FK = foreign key   UK = unique key</text>
+<line x1="270" y1="162.0" x2="600" y2="162.0" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="270" cy="162.0" r="3" fill="#6b7280"/>
+<circle cx="600" cy="162.0" r="3" fill="#6b7280"/>
+<rect x="416.0" y="153.0" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="435.0" y="164.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<line x1="550" y1="144.0" x2="600" y2="162.0" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="550" cy="144.0" r="3" fill="#6b7280"/>
+<circle cx="600" cy="162.0" r="3" fill="#6b7280"/>
+<rect x="556.0" y="144.0" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="575.0" y="155.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<path d="M 445 188 Q 500 260 985 100" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="445" cy="188" r="3" fill="#6b7280"/>
+<circle cx="985" cy="100" r="3" fill="#6b7280"/>
+<rect x="481.0" y="251" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="500" y="262" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<path d="M 985 206 Q 740 260 705 320" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="985" cy="206" r="3" fill="#6b7280"/>
+<circle cx="705" cy="320" r="3" fill="#6b7280"/>
+<rect x="721.0" y="251" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="740" y="262" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<path d="M 1265 224 Q 1000 260 705 320" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="1265" cy="224" r="3" fill="#6b7280"/>
+<circle cx="705" cy="320" r="3" fill="#6b7280"/>
+<rect x="971.4" y="251" width="57.2" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="1000" y="262" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">0..1 : N</text>
+
+<line x1="810" y1="409.0" x2="880" y2="391.0" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="810" cy="409.0" r="3" fill="#6b7280"/>
+<circle cx="880" cy="391.0" r="3" fill="#6b7280"/>
+<rect x="826.0" y="391.0" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="845.0" y="402.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<line x1="1090" y1="391.0" x2="1160" y2="391.0" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="1090" cy="391.0" r="3" fill="#6b7280"/>
+<circle cx="1160" cy="391.0" r="3" fill="#6b7280"/>
+
+<path d="M 705 498 Q 1050 500 1265 320" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="705" cy="498" r="3" fill="#6b7280"/>
+<circle cx="1265" cy="320" r="3" fill="#6b7280"/>
+<rect x="1031.0" y="491" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="1050" y="502" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<line x1="705" y1="498" x2="705" y2="620" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="705" cy="498" r="3" fill="#6b7280"/>
+<circle cx="705" cy="620" r="3" fill="#6b7280"/>
+<rect x="686.0" y="550.0" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="705.0" y="561.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<line x1="165" y1="464" x2="165" y2="540" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="165" cy="464" r="3" fill="#6b7280"/>
+<circle cx="165" cy="540" r="3" fill="#6b7280"/>
+<rect x="146.0" y="493.0" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="165.0" y="504.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<path d="M 270 602.0 Q 400 720 600 754.0" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="270" cy="602.0" r="3" fill="#6b7280"/>
+<circle cx="600" cy="754.0" r="3" fill="#6b7280"/>
+<rect x="323.4" y="711" width="153.20000000000002" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="400" y="722" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">worker locks
+(0..1 : N)</text>
+
+<line x1="810" y1="754.0" x2="900" y2="718.0" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="810" cy="754.0" r="3" fill="#6b7280"/>
+<circle cx="900" cy="718.0" r="3" fill="#6b7280"/>
+<rect x="836.0" y="727.0" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="855.0" y="738.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<line x1="1110" y1="718.0" x2="1200" y2="673.0" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="1110" cy="718.0" r="3" fill="#6b7280"/>
+<circle cx="1200" cy="673.0" r="3" fill="#6b7280"/>
+
+<path d="M 705 888 Q 900 950 1305 620" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="705" cy="888" r="3" fill="#6b7280"/>
+<circle cx="1305" cy="620" r="3" fill="#6b7280"/>
+<rect x="881.0" y="941" width="38.0" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="900" y="952" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">1 : N</text>
+
+<path d="M 270 402.0 Q 500 500 900 645" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+<circle cx="270" cy="402.0" r="3" fill="#6b7280"/>
+<circle cx="900" cy="645" r="3" fill="#6b7280"/>
+<rect x="445.8" y="491" width="108.4" height="14" fill="#fafafa" opacity="0.95"/>
+<text x="500" y="502" text-anchor="middle" font-family="Segoe UI, Arial" font-size="9.5" font-style="italic" fill="#4b5563">executes
+(1 : N)</text>
+
+<g><rect x="60" y="100" width="210" height="124" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="60" y="100" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="60" y="120" width="210" height="6" fill="#4338ca"/>
+<text x="165.0" y="118.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">User</text>
+<text x="70" y="143.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="260" y="143.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="155" y="143.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="70" y="161.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">name</text>
+<text x="260" y="161.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="70" y="179.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">email</text>
+<text x="260" y="179.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="155" y="179.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#6b7280">UK</text>
+<text x="70" y="197.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">password_hash</text>
+<text x="260" y="197.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="70" y="215.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="260" y="215.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="340" y="100" width="210" height="88" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="340" y="100" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="340" y="120" width="210" height="6" fill="#4338ca"/>
+<text x="445.0" y="118.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">Organization</text>
+<text x="350" y="143.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="540" y="143.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="435" y="143.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="350" y="161.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">name</text>
+<text x="540" y="161.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="350" y="179.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="540" y="179.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="600" y="100" width="210" height="124" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="600" y="100" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="600" y="120" width="210" height="6" fill="#4338ca"/>
+<text x="705.0" y="118.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">OrganizationMember</text>
+<text x="610" y="143.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="800" y="143.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="143.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="610" y="161.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">user_id</text>
+<text x="800" y="161.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="161.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="610" y="179.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">organization_id</text>
+<text x="800" y="179.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="179.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="610" y="197.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">role</text>
+<text x="800" y="197.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="610" y="215.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="800" y="215.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="880" y="100" width="210" height="106" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="880" y="100" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="880" y="120" width="210" height="6" fill="#4338ca"/>
+<text x="985.0" y="118.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">Project</text>
+<text x="890" y="143.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="1080" y="143.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="975" y="143.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="890" y="161.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">organization_id</text>
+<text x="1080" y="161.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="975" y="161.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="890" y="179.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">name</text>
+<text x="1080" y="179.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="890" y="197.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="1080" y="197.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="1160" y="100" width="210" height="124" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="1160" y="100" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="1160" y="120" width="210" height="6" fill="#4338ca"/>
+<text x="1265.0" y="118.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">RetryPolicy</text>
+<text x="1170" y="143.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="1360" y="143.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="1255" y="143.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="1170" y="161.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">strategy</text>
+<text x="1360" y="161.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="1170" y="179.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">base_delay_ms</text>
+<text x="1360" y="179.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="1170" y="197.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">max_delay_ms</text>
+<text x="1360" y="197.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="1170" y="215.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="1360" y="215.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="600" y="320" width="210" height="178" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="600" y="320" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="600" y="340" width="210" height="6" fill="#4338ca"/>
+<text x="705.0" y="338.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">Queue</text>
+<text x="610" y="363.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="800" y="363.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="363.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="610" y="381.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">project_id</text>
+<text x="800" y="381.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="381.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="610" y="399.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">retry_policy_id</text>
+<text x="800" y="399.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="399.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="610" y="417.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">name</text>
+<text x="800" y="417.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="610" y="435.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">priority</text>
+<text x="800" y="435.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="610" y="453.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">concurrency_limit</text>
+<text x="800" y="453.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="610" y="471.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">paused</text>
+<text x="800" y="471.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Boolean</text>
+<text x="610" y="489.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="800" y="489.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="880" y="320" width="210" height="142" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="880" y="320" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="880" y="340" width="210" height="6" fill="#4338ca"/>
+<text x="985.0" y="338.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">ScheduledJob</text>
+<text x="890" y="363.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="1080" y="363.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="975" y="363.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="890" y="381.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">queue_id</text>
+<text x="1080" y="381.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="975" y="381.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="890" y="399.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">type</text>
+<text x="1080" y="399.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="890" y="417.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">cron_expression</text>
+<text x="1080" y="417.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="890" y="435.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">payload</text>
+<text x="1080" y="435.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Json</text>
+<text x="890" y="453.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="1080" y="453.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="1160" y="320" width="210" height="142" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="1160" y="320" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="1160" y="340" width="210" height="6" fill="#4338ca"/>
+<text x="1265.0" y="338.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">DeadLetterQueue</text>
+<text x="1170" y="363.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="1360" y="363.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="1255" y="363.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="1170" y="381.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">queue_id</text>
+<text x="1360" y="381.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="1255" y="381.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="1170" y="399.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">job_id</text>
+<text x="1360" y="399.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="1255" y="399.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#9ca3af">no-FK*</text>
+<text x="1170" y="417.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">payload</text>
+<text x="1360" y="417.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Json</text>
+<text x="1170" y="435.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">error_reason</text>
+<text x="1360" y="435.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="1170" y="453.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="1360" y="453.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="60" y="340" width="210" height="124" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="60" y="340" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="60" y="360" width="210" height="6" fill="#4338ca"/>
+<text x="165.0" y="358.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">Worker</text>
+<text x="70" y="383.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="260" y="383.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="155" y="383.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="70" y="401.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">name</text>
+<text x="260" y="401.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="70" y="419.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">status</text>
+<text x="260" y="419.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="70" y="437.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">started_at</text>
+<text x="260" y="437.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+<text x="70" y="455.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">last_heartbeat_at</text>
+<text x="260" y="455.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="60" y="540" width="210" height="124" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="60" y="540" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="60" y="560" width="210" height="6" fill="#4338ca"/>
+<text x="165.0" y="558.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">WorkerHeartbeat</text>
+<text x="70" y="583.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="260" y="583.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="155" y="583.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="70" y="601.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">worker_id</text>
+<text x="260" y="601.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="155" y="601.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="70" y="619.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">reported_at</text>
+<text x="260" y="619.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+<text x="70" y="637.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">current_load</text>
+<text x="260" y="637.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="70" y="655.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">cpu_percent</text>
+<text x="260" y="655.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Float?</text>
+</g>
+
+<g><rect x="600" y="620" width="210" height="268" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="600" y="620" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="600" y="640" width="210" height="6" fill="#4338ca"/>
+<text x="705.0" y="638.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">Job</text>
+<text x="610" y="663.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="800" y="663.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="663.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="610" y="681.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">queue_id</text>
+<text x="800" y="681.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="681.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="610" y="699.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">type</text>
+<text x="800" y="699.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="610" y="717.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">status</text>
+<text x="800" y="717.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="610" y="735.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">payload</text>
+<text x="800" y="735.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Json</text>
+<text x="610" y="753.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">priority</text>
+<text x="800" y="753.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="610" y="771.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">attempts</text>
+<text x="800" y="771.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="610" y="789.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">max_attempts</text>
+<text x="800" y="789.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="610" y="807.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">run_at</text>
+<text x="800" y="807.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+<text x="610" y="825.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">locked_by</text>
+<text x="800" y="825.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="695" y="825.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="610" y="843.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">locked_at</text>
+<text x="800" y="843.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+<text x="610" y="861.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="800" y="861.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+<text x="610" y="879.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">completed_at</text>
+<text x="800" y="879.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<g><rect x="900" y="620" width="210" height="196" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="900" y="620" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="900" y="640" width="210" height="6" fill="#4338ca"/>
+<text x="1005.0" y="638.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">JobExecution</text>
+<text x="910" y="663.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="1100" y="663.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="995" y="663.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="910" y="681.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">job_id</text>
+<text x="1100" y="681.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="995" y="681.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="910" y="699.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">worker_id</text>
+<text x="1100" y="699.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="995" y="699.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="910" y="717.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">attempt_number</text>
+<text x="1100" y="717.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="910" y="735.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">status</text>
+<text x="1100" y="735.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="910" y="753.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">started_at</text>
+<text x="1100" y="753.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+<text x="910" y="771.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">finished_at</text>
+<text x="1100" y="771.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+<text x="910" y="789.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">duration_ms</text>
+<text x="1100" y="789.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">Int</text>
+<text x="910" y="807.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">error_message</text>
+<text x="1100" y="807.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+</g>
+
+<g><rect x="1200" y="620" width="210" height="106" rx="6" fill="#ffffff" stroke="#374151" stroke-width="1.3"/>
+<rect x="1200" y="620" width="210" height="26" rx="6" fill="#4338ca"/>
+<rect x="1200" y="640" width="210" height="6" fill="#4338ca"/>
+<text x="1305.0" y="638.0" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="700" fill="white">JobLog</text>
+<text x="1210" y="663.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">id</text>
+<text x="1400" y="663.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="1295" y="663.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#b45309">PK</text>
+<text x="1210" y="681.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">job_id</text>
+<text x="1400" y="681.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">UUID</text>
+<text x="1295" y="681.0" font-family="Consolas, monospace" font-size="9" font-weight="700" fill="#1d4ed8">FK</text>
+<text x="1210" y="699.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">message</text>
+<text x="1400" y="699.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">String</text>
+<text x="1210" y="717.0" font-family="Consolas, monospace" font-size="10.5" fill="#111827">created_at</text>
+<text x="1400" y="717.0" text-anchor="end" font-family="Consolas, monospace" font-size="9.5" fill="#6b7280">DateTime</text>
+</g>
+
+<rect x="1360" y="620" width="300" height="230" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="1380" y="644" font-family="Segoe UI, Arial" font-size="12" font-weight="700" fill="#111827">Notes</text>
+<text x="1380" y="664" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">no-FK* : DeadLetterQueue.job_id is</text>
+<text x="1380" y="680" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">intentionally NOT a foreign key so a</text>
+<text x="1380" y="696" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">purged Job row does not cascade-</text>
+<text x="1380" y="712" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">delete its own failure history.</text>
+<text x="1380" y="728" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151"></text>
+<text x="1380" y="744" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">Job.locked_by -> Worker.id (0..1)</text>
+<text x="1380" y="760" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">identifies which worker currently</text>
+<text x="1380" y="776" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">holds the atomic claim on a job.</text>
+<text x="1380" y="792" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151"></text>
+<text x="1380" y="808" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">WorkerHeartbeat is append-only;</text>
+<text x="1380" y="824" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">Worker.last_heartbeat_at is a fast</text>
+<text x="1380" y="840" font-family="Segoe UI, Arial" font-size="10.5" fill="#374151">in-place cache for crash detection.</text>
+</svg>

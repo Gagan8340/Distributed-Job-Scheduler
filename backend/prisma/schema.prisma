@@ -1,0 +1,204 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String   @id @default(uuid()) @db.Uuid
+  name          String
+  email         String   @unique
+  password_hash String
+  created_at    DateTime @default(now())
+
+  organizationMembers OrganizationMember[]
+}
+
+model Organization {
+  id         String   @id @default(uuid()) @db.Uuid
+  name       String
+  created_at DateTime @default(now())
+
+  members  OrganizationMember[]
+  projects Project[]
+}
+
+model OrganizationMember {
+  id              String   @id @default(uuid()) @db.Uuid
+  user_id         String   @db.Uuid
+  organization_id String   @db.Uuid
+  role            String   @default("VIEWER")
+  created_at      DateTime @default(now())
+
+  user         User         @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  organization Organization @relation(fields: [organization_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, organization_id])
+}
+
+model Project {
+  id              String   @id @default(uuid()) @db.Uuid
+  organization_id String   @db.Uuid
+  name            String
+  created_at      DateTime @default(now())
+
+  organization Organization @relation(fields: [organization_id], references: [id], onDelete: Cascade)
+  queues       Queue[]
+
+  @@index([organization_id])
+}
+
+model RetryPolicy {
+  id            String   @id @default(uuid()) @db.Uuid
+  strategy      String   // FIXED, LINEAR, EXPONENTIAL
+  base_delay_ms Int
+  max_delay_ms  Int
+  created_at    DateTime @default(now())
+
+  queues Queue[]
+}
+
+model Queue {
+  id                String   @id @default(uuid()) @db.Uuid
+  project_id        String   @db.Uuid
+  retry_policy_id   String?  @db.Uuid
+  name              String
+  priority          Int      @default(0)
+  concurrency_limit Int      @default(10)
+  paused            Boolean  @default(false)
+  shard_id          Int      @default(1)
+  created_at        DateTime @default(now())
+
+  project      Project      @relation(fields: [project_id], references: [id], onDelete: Cascade)
+  retry_policy RetryPolicy? @relation(fields: [retry_policy_id], references: [id])
+  jobs         Job[]
+  scheduled    ScheduledJob[]
+  dlq          DeadLetterQueue[]
+
+  @@index([project_id])
+}
+
+model Job {
+  id           String    @id @default(uuid()) @db.Uuid
+  queue_id     String    @db.Uuid
+  type         String
+  status       String    // QUEUED, SCHEDULED, CLAIMED, RUNNING, COMPLETED, FAILED, RETRY_SCHEDULED, CANCELLED
+  payload      Json
+  priority     Int       @default(0)
+  attempts     Int       @default(0)
+  max_attempts Int       @default(3)
+  shard_id     Int       @default(1)
+  run_at       DateTime  @default(now())
+  locked_by    String?   @db.Uuid
+  locked_at    DateTime?
+  created_at   DateTime  @default(now())
+  completed_at DateTime?
+
+  queue      Queue          @relation(fields: [queue_id], references: [id], onDelete: Cascade)
+  executions JobExecution[]
+  logs       JobLog[]
+  worker     Worker?        @relation(fields: [locked_by], references: [id])
+  
+  dependencies JobDependency[] @relation("JobDependencies")
+  dependentOn  JobDependency[] @relation("DependentJobs")
+
+  @@index([queue_id, status, run_at, priority])
+  @@index([status, run_at])
+}
+
+model JobExecution {
+  id             String    @id @default(uuid()) @db.Uuid
+  job_id         String    @db.Uuid
+  worker_id      String    @db.Uuid
+  attempt_number Int
+  status         String
+  started_at     DateTime  @default(now())
+  finished_at    DateTime?
+  duration_ms    Int?
+  error_message  String?
+
+  job    Job    @relation(fields: [job_id], references: [id], onDelete: Cascade)
+  worker Worker @relation(fields: [worker_id], references: [id])
+
+  @@index([job_id, attempt_number])
+}
+
+model JobLog {
+  id         String   @id @default(uuid()) @db.Uuid
+  job_id     String   @db.Uuid
+  message    String
+  created_at DateTime @default(now())
+
+  job Job @relation(fields: [job_id], references: [id], onDelete: Cascade)
+
+  @@index([job_id, created_at])
+}
+
+model Worker {
+  id                String   @id @default(uuid()) @db.Uuid
+  name              String
+  status            String   // ACTIVE, STOPPED
+  started_at        DateTime @default(now())
+  last_heartbeat_at DateTime @default(now())
+
+  locked_jobs Job[]
+  executions  JobExecution[]
+  heartbeats  WorkerHeartbeat[]
+
+  @@index([last_heartbeat_at])
+}
+
+model WorkerHeartbeat {
+  id           String   @id @default(uuid()) @db.Uuid
+  worker_id    String   @db.Uuid
+  reported_at  DateTime @default(now())
+  current_load Int      @default(0)
+  cpu_percent  Float?
+
+  worker Worker @relation(fields: [worker_id], references: [id], onDelete: Cascade)
+
+  @@index([worker_id, reported_at])
+}
+
+model ScheduledJob {
+  id              String   @id @default(uuid()) @db.Uuid
+  queue_id        String   @db.Uuid
+  type            String
+  cron_expression String
+  payload         Json
+  created_at      DateTime @default(now())
+
+  queue Queue @relation(fields: [queue_id], references: [id], onDelete: Cascade)
+}
+
+model DeadLetterQueue {
+  id           String   @id @default(uuid()) @db.Uuid
+  queue_id     String   @db.Uuid
+  job_id       String   @db.Uuid
+  payload      Json
+  error_reason String?
+  ai_summary   String?  @db.Text
+  created_at   DateTime @default(now())
+
+  queue Queue @relation(fields: [queue_id], references: [id], onDelete: Cascade)
+
+  @@index([queue_id, created_at])
+}
+
+model JobDependency {
+  id               String   @id @default(uuid()) @db.Uuid
+  parent_job_id    String   @db.Uuid
+  dependent_job_id String   @db.Uuid
+  created_at       DateTime @default(now())
+
+  parent    Job @relation("DependentJobs", fields: [parent_job_id], references: [id], onDelete: Cascade)
+  dependent Job @relation("JobDependencies", fields: [dependent_job_id], references: [id], onDelete: Cascade)
+
+  @@unique([parent_job_id, dependent_job_id])
+  @@index([dependent_job_id])
+}

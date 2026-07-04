@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distributed Job Scheduler - Technical Design Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: false,
+            theme: 'default',
+            er: { layoutDirection: 'LR', minEntityWidth: 100, minEntityHeight: 75, entityPadding: 15, stroke: 'gray', fill: 'white', fontSize: 12 },
+            flowchart: { nodeSpacing: 50, rankSpacing: 50 }
+        });
+
+        async function render() {
+            try {
+                const res = await fetch('FINAL_SUBMISSION_REPORT.md');
+                let text = await res.text();
+                
+                // Aggressive Emoji removal
+                const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
+                text = text.replace(emojiRegex, '');
+                text = text.replace(/\*\*(.*?)\*\*/g, '$1');
+
+                const renderer = new marked.Renderer();
+                let headings = [];
+                let h1Counter = 0;
+                let h2Counter = 0;
+                
+                renderer.heading = function(codeInfo) {
+                    let rawText = codeInfo.text || codeInfo;
+                    const level = codeInfo.depth || codeInfo.level;
+                    
+                    // Remove existing numbers at the start of the heading (e.g. "1. " or "1.1 ")
+                    rawText = rawText.replace(/^\d+(\.\d+)*\.?\s*/, '').trim();
+
+                    if (level === 1 && rawText.toLowerCase().includes('distributed job scheduler')) {
+                        // Skip the main title headers from TOC numbering
+                        return `<h1>${rawText}</h1>`;
+                    }
+
+                    if (level === 1) {
+                        h1Counter++;
+                        h2Counter = 0;
+                        const numberedText = `${h1Counter}. ${rawText}`;
+                        const id = numberedText.toLowerCase().replace(/[^\w]+/g, '-');
+                        headings.push({ text: numberedText, level, id });
+                        return `<h${level} id="${id}">${numberedText}</h${level}>`;
+                    } else if (level === 2) {
+                        h2Counter++;
+                        // If there was no h1 yet, assume it's under 1
+                        const h1P = h1Counter === 0 ? 1 : h1Counter;
+                        const numberedText = `${h1P}.${h2Counter} ${rawText}`;
+                        const id = numberedText.toLowerCase().replace(/[^\w]+/g, '-');
+                        headings.push({ text: numberedText, level, id });
+                        return `<h${level} id="${id}">${numberedText}</h${level}>`;
+                    }
+                    
+                    return `<h${level}>${rawText}</h${level}>`;
+                };
+
+                renderer.code = function(codeInfo) {
+                    const text = codeInfo.text || codeInfo;
+                    const lang = codeInfo.lang || '';
+                    if (lang === 'mermaid') {
+                        return `<div class="mermaid">${text}</div>`;
+                    }
+                    return `<pre><code class="language-${lang}">${escape(text)}</code></pre>`;
+                };
+
+                marked.setOptions({ renderer });
+                const parsedContent = marked.parse(text);
+
+                // Build perfectly divided Table of Contents
+                let tocHTML = '<div class="toc page-break"><h2>Table of Contents</h2><ul class="toc-level-1">';
+                headings.forEach(h => {
+                    if (h.level === 1) {
+                        tocHTML += `</ul><ul class="toc-level-1"><li><a href="#${h.id}">${h.text}</a><ul class="toc-level-2">`;
+                    } else if (h.level === 2) {
+                        tocHTML += `<li><a href="#${h.id}">${h.text}</a></li>`;
+                    }
+                });
+                // Close lists
+                tocHTML += '</ul></li></ul></div>';
+
+                const titlePage = `
+                    <div class="title-page page-break">
+                        <div class="title-content">
+                            <h1 style="border: none; font-size: 28pt;">TECHNICAL DESIGN DOCUMENT</h1>
+                            <h2 style="border: none; font-size: 20pt; color: #2b6cb0; margin-top: 20px;">Distributed Job Scheduling Platform</h2>
+                            <p style="margin-top: 40px; font-size: 14pt; color: #4a5568;">System Architecture • Database Design • Concurrency & Reliability</p>
+                            <div style="margin-top: 100px;">
+                                <p><strong>Author:</strong> [Your Name Here]</p>
+                                <p><strong>Repository:</strong> [Your GitHub Link Here]</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                document.getElementById('content').innerHTML = titlePage + tocHTML + parsedContent;
+                await mermaid.run({ querySelector: '.mermaid' });
+            } catch (e) {
+                document.getElementById('content').innerHTML = "Error loading markdown: " + e.message;
+            }
+        }
+        
+        render();
+    </script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #111;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 1in;
+            background: white;
+        }
+
+        .title-page { display: flex; align-items: center; justify-content: center; height: 80vh; text-align: center; }
+        .title-content { border: 2px solid #cbd5e1; padding: 50px; border-radius: 8px; background: #f8fafc; }
+
+        .toc { margin-bottom: 40px; }
+        .toc-level-1 { list-style-type: none; padding-left: 0; margin-bottom: 10px; }
+        .toc-level-1 > li { font-weight: bold; font-size: 14pt; margin-top: 15px; }
+        .toc-level-1 > li > a { color: #1a365d; text-decoration: none; }
+        
+        .toc-level-2 { list-style-type: none; padding-left: 20px; font-weight: normal; margin-top: 5px; }
+        .toc-level-2 li { font-size: 12pt; margin-bottom: 5px; }
+        .toc-level-2 a { color: #2b6cb0; text-decoration: none; }
+        .toc-level-2 a:hover, .toc-level-1 > li > a:hover { text-decoration: underline; }
+
+        h1, h2, h3, h4, h5, h6 { font-family: 'Times New Roman', Times, serif; color: #1a365d; margin-top: 1.5em; margin-bottom: 0.5em; font-weight: normal; }
+        h1 { font-size: 18pt; border-bottom: 2px solid #1a365d; padding-bottom: 10px; font-weight: bold; }
+        h2 { font-size: 16pt; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; font-weight: bold; }
+        h3, h4 { font-size: 14pt; font-weight: bold; }
+
+        table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 11pt; page-break-inside: avoid; }
+        th, td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; }
+        th { background-color: #f1f5f9; color: #1a365d; font-weight: bold; }
+
+        code { font-family: Consolas, Monaco, monospace; background-color: #f8fafc; padding: 2px 4px; border-radius: 3px; font-size: 11pt; }
+        pre { background-color: #f8fafc; padding: 1em; border-radius: 4px; border: 1px solid #e2e8f0; overflow-x: auto; page-break-inside: avoid; }
+        pre code { background-color: transparent; padding: 0; border: none; }
+        .mermaid { text-align: center; margin: 2em 0; page-break-inside: avoid; }
+        hr { border: none; border-top: 1px solid #e2e8f0; margin: 2em 0; }
+
+        @media print {
+            body { padding: 0; margin: 0.5in; }
+            .page-break { page-break-after: always; }
+            h2, h3, h4 { page-break-after: avoid; }
+            table, pre, .mermaid { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div id="content">Loading documentation and generating diagrams...</div>
+</body>
+</html>
